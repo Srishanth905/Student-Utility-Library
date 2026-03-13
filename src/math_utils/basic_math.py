@@ -63,5 +63,4 @@ def square_root(number: Union[int, float], precision: float = 1e-10) -> float:
     TODO: Implement this function
     Hint: Use Newton's method: x_new = (x + number/x) / 2
     """
-    # TODO: Implement this function
     pass
