@@ -16,6 +16,40 @@ def factorial(n: int) -> int:
         raise ValueError("Factorial is not defined for negative numbers")
     if n == 0 or n == 1:
         return 1
+    """
+    Calculate the factorial of a non-negative integer.
+    
+    Factorial of n (denoted as n!) is the product of all positive integers 
+    less than or equal to n. By definition, 0! = 1.
+    
+    Args:
+        n (int): Non-negative integer to calculate factorial for
+        
+    Returns:
+        int: The factorial of n
+        
+    Raises:
+        ValueError: If n is negative
+        
+    Examples:
+        >>> factorial(5)
+        120
+        >>> factorial(0)
+        1
+        >>> factorial(1)
+        1
+    
+    # TODO: Implement this function
+    # Hint: You can use recursion or iteration. Don't forget to handle edge cases!
+    """
+    # Step 1: Check if n is negative and raise ValueError if so
+    if n < 0:
+        raise ValueError("Factorial is not defined for negative numbers")
+    # Step 2: Handle base cases (0 and 1)
+    if n <= 1:
+        return 1
+    # Step 3: Calculate factorial using a loop
+main
     result = 1
     for i in range(2, n + 1):
         result *= i
