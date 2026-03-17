@@ -34,6 +34,7 @@ def mean(numbers: List[Union[int, float]]) -> float:
     Hint: Sum all numbers and divide by the count
     """
     # TODO: Implement this function
+    
     pass
 
 
@@ -63,6 +64,7 @@ def median(numbers: List[Union[int, float]]) -> float:
     Hint: Sort the list first, then find the middle value(s)
     """
     # TODO: Implement this function
+
     pass
 
 

@@ -42,6 +42,14 @@ def factorial(n: int) -> int:
     # Step 1: Check if n is negative and raise ValueError if so
     # Step 2: Handle base cases (0 and 1)
     # Step 3: Calculate factorial using loop or recursion
+    if n < 0:
+        raise ValueError("Factorial is not defined for negative numbers")
+    if n == 0 or n == 1:
+        return 1
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
     pass
 
 
@@ -70,6 +78,19 @@ def power(base: Union[int, float], exponent: int) -> Union[int, float]:
     Hint: Handle negative exponents by taking reciprocal. Use iteration or recursion.
     """
     # TODO: Implement this function
+    if exponent == 0:
+        return 1
+    elif exponent > 0:
+        result = 1
+        for _ in range(exponent):
+            result *= base
+        return result   
+    else:
+        # Handle negative exponents
+        result = 1
+        for _ in range(-exponent):
+            result *= base
+        return 1 / result
     pass
 
 
@@ -99,4 +120,16 @@ def square_root(number: Union[int, float], precision: float = 1e-10) -> float:
     Hint: Use Newton's method: x_new = (x + number/x) / 2
     """
     # TODO: Implement this function
+
+    if number < 0:
+        raise ValueError("Cannot calculate square root of a negative number")
+
+    x = number 
+    while True:
+        x_new = (x + number/x) / 2
+        if abs(x_new - x) < precision:
+            return x_new
+        x = x_new
+
+        print(f"Current approximation: {x_new}")
     pass
